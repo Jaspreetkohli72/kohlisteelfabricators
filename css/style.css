@@ -4,6 +4,37 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+     .btn-back-to-top {
+       display: none;
+       position: fixed;
+       bottom: 20px;
+       right: 20px;
+       z-index: 99;
+       font-size: 16px;
+       padding: 10px 15px;
+       border: 2px solid transparent;
+       /* Initially transparent border */
+       outline: none;
+       background-color: #fd5f00;
+       /* Orange background */
+       color: #fff;
+       border-radius: 50%;
+       cursor: pointer;
+       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+       transition: all 0.3s ease;
+       /* Smooth transition */
+     }
+  
+     .btn-back-to-top:hover {
+       background-color: transparent;
+       /* Transparent background on hover */
+       border-color: #fd5f00;
+       /* Orange border on hover */
+       color: #fd5f00;
+       /* Orange text color on hover */
+     }
+     
 :root {
   --blue: #007bff;
   --indigo: #6610f2;

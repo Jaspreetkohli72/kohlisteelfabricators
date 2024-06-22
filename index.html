@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
+
+
 <body>
   <header role="banner">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -375,6 +377,7 @@
       </div>
     </div>
   </section>
+  <a id="back-to-top" href="#" class="btn btn-primary btn-back-to-top"><i class="fa fa-angle-up"></i></a>
   <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="row mb-5">
@@ -438,6 +441,8 @@
       <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
         stroke="#f4b214" />
     </svg></div>
+
+
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -459,8 +464,29 @@
     integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
     data-cf-beacon='{"rayId":"896e9885899eac28","b":1,"version":"2024.4.1","token":"cd0b4b3a733644fc843ef0b185f98241"}'
     crossorigin="anonymous"></script>
-</body>
 
-<!-- Mirrored from preview.colorlib.com/theme/industrial/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jun 2024 20:44:25 GMT -->
+  <script>
+    $(document).ready(function () {
+      // Show or hide the sticky footer button
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+          $('#back-to-top').fadeIn(200);
+        } else {
+          $('#back-to-top').fadeOut(200);
+        }
+      });
+
+      // Animate the scroll to top
+      $('#back-to-top').click(function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+          scrollTop: 0
+        }, 300);
+      });
+    });
+  </script>
+
+</body>
 
 </html>
